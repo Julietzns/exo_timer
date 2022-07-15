@@ -3,6 +3,67 @@
     padding: 0;
 }
 
+:root {
+    --color-body: #131527;
+    --color-yellow: #ffd53b;
+}
+
 body {
-    background-color: aquamarine;
+    background-color: var(--color-body);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-yellow);
+}
+
+.box-button {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.my-button {
+    width: 310px;
+    height: 100px;
+    color: var(--color-yellow);
+    background-color: var(--color-body);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    border-radius: 4px;
+    border: 3px solid var(--color-yellow);
+    box-shadow: 2px 4px 2px 1px rgba(6, 6, 26, 0.1);
+    transition: ease-in-out 0.3s;
+    outline: none;
+    position: relative;
+    z-index: 1;
+}
+
+.my-button:hover {
+    background-color: var(--color-body);
+    color: var(--color-body);
+    cursor: pointer;
+}
+
+.my-button::before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: var(--color-yellow);
+}
+
+.my-button:hover::before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
 }

@@ -10,7 +10,7 @@ function start() {
 
 function stop() {
     clearInterval(interval);
-    document.body.innerHTML += "Stop !";
+    document.body.innerHTML += "<br>" + "Stop !";
 }
 
 function decompte() {
